@@ -56,7 +56,7 @@ module uart_rx (
       case (st)
         idle: 
           if (~rx) begin
-             n_st <= start;
+             n_st = start;
           end
 
         start: 
