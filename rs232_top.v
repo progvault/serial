@@ -26,17 +26,19 @@ module rs232_top (
                 .O_TX_DONE    (          ), 
                 .O_TX         (O_TX      )) ;
 
+   // baud rate gen
    always @ (posedge I_CLK, negedge I_RSTF) begin
       if (!I_RSTF)
-        baud_cnt = 0;
+        baud_cnt  <= 0;
+        baud_tick <= 1;
       else
         if (baud_cnt == 26) begin
-           baud_cnt  = 0;
-           baud_tick = 1;
+           baud_cnt  <= 0;
+           baud_tick <= 1;
         end
         else begin
-           baud_cnt  = baud_cnt+1 ;
-           baud_tick = 0;
+           baud_cnt  <= baud_cnt+1 ;
+           baud_tick <= 0;
         end
    end
       
