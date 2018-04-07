@@ -1,3 +1,9 @@
 serial
 ======
-RS232 UART controller and C test code.
+RS232 UART controller.
+
+Description
+----------
+A simple UART controller written in Verilog.
+
+Test code written in C is provided.
