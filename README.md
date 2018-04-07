@@ -6,4 +6,4 @@ Description
 ----------
 A simple UART controller written in Verilog.
 
-Test code written in C is provided.
+A driver written in C is included.
